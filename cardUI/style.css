@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #171c3c;
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  background-color: #ed4848;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  box-shadow: inset 0 0 0 100px rgba(255, 190, 0, 0.7);
+}
+
+.card i {
+  color: white;
+  font-size: 6rem;
+  position: absolute; /* relative가 기준(card) */
+  left: 50%;
+  top: 50%;
+  margin-left: -44px;
+  margin-top: -48px;
+}
+
+.card i:nth-of-type(1) {
+  transform: scale(0); /* 0배 */
+}
+
+.card:hover i:nth-of-type(1) {
+  transform: scale(1); /* 1배 */
+}
+
+.card:hover i:nth-of-type(2) {
+  transform: scale(0);
+}

@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.ghost {
+  animation: moveUpDown 3s infinite;
+  position: absolute;
+}
+
+@keyframes moveUpDown {
+  0% {
+    margin-top: 0px;
+  }
+
+  50% {
+    margin-top: -50px;
+  }
+
+  100% {
+    margin-top: 0px;
+  }
+}
+
+.ghost .body {
+  width: 120px;
+  height: 160px;
+  background-color: white;
+  border-top-left-radius: 45%;
+  border-top-right-radius: 45%;
+  position: relative; /* relative는 absolute의 기준 */
+}
+
+.ghost .body .face {
+  width: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 40px;
+  /* 중앙 정렬은 left와 translate를 모두 활용 */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ghost .body .face .eye {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background-color: #333;
+}
+
+.ghost .body .face .mouth {
+  width: 33px;
+  height: 15px;
+  background-color: tomato;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-left: 18px;
+  margin-top: 13px;
+}
+
+.ghost .bottom {
+  display: flex;
+  flex-direction: row;
+}
+
+.ghost .bottom .leg {
+  width: 24px; /* leg는 5개 인데, 전체 body는 120px이므로 leg 하나는 24px */
+  height: 15px;
+  background-color: white;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.ghost .bottom .leg:nth-child(2n) {
+  position: relative;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  top: -5px;
+  background-color: black;
+}

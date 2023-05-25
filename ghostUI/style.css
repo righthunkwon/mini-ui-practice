@@ -91,6 +91,6 @@ body {
   position: relative;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
-  top: -5px;
-  background-color: black;
+  top: -3px;
+  background-color: lightgrey;
 }

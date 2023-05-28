@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.block {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  /* 
+      height는 100%라 지정할 경우 실제 100%로 지정되지 않는다. 
+      body와 html에서 100%를 지정하면 문제는 해결되지만 그게 번거로우므로
+      height에는 100vh를 주는 습관을 들이자. 
+    */
+
+  /* 배경 이미지에 명암 넣기 */
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(./bg-image.jpg);
+}
+
+.container header {
+  width: 80%;
+  height: 80px;
+
+  /* 수평기준 중앙 정렬 */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container header h1 a {
+  text-decoration: none;
+  color: white;
+}
+
+.container .intro {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container .intro h2 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.container .intro p {
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.container .intro button {
+  background: none;
+  border: 2px solid darkseagreen;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 20px;
+  margin-top: 30px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.container .intro button:hover {
+  background-color: darkslategray;
+}
+
+.container .game {
+  display: none;
+}

@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "SUITE-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #363636;
+}
+
+.typing-text {
+  font-family: SUITE-REgular;
+  color: white;
+  font-size: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+
+  /* 커서 깜빡이 효과 */
+  border-right: 3px solid white;
+  animation: blink 0.5s infinite, typing 2s steps(22);
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 314px;
+  }
+}

@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=1, initial-scale=1.0">
     <title>Typing Master</title>
     <link rel="stylesheet" href="./style.css">
+    <!-- api 활용 라이브러리 -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -24,7 +26,7 @@
             </div>
             <div class="game">
                 <div class="word-display">
-                    TEST WORD
+                    WORD
                 </div>
                 <div class="word-input-box">
                     <input type="text" class="word-input">
@@ -37,11 +39,11 @@
                         획득점수: <span class="score">0</span>점
                     </div>
                 </div>
-                <button class="button loading">게임을 불러오는 중...</button>
+                <button class="button loading" onclick="run()">게임을 불러오는 중...</button>
             </div>
         </section>
     </div>
-    <script src="./index.js"></script>
+    <script src="./main.js"></script>
 </body>
 
 </html>

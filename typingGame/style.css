@@ -87,5 +87,72 @@ body {
 }
 
 .container .game {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   display: none;
+}
+
+.container .game .word-display {
+  font-size: 60px;
+  font-weight: 540;
+  margin-bottom: 20px;
+  cursor: default;
+}
+
+.container .game .word-input-box {
+  margin-top: 2rem;
+}
+
+.container .game .word-input {
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+}
+
+.container .game .game-info {
+  margin-top: 1rem;
+  font-size: 14px;
+  line-height: 40px;
+  cursor: default;
+}
+
+.container .game .time,
+.score {
+  font-size: 26px;
+}
+
+.time {
+  color: tomato;
+}
+
+.score {
+  color: dodgerblue;
+}
+
+.container .game .button {
+  width: 200px;
+  height: 35px;
+  background: #0cc75a;
+  color: white;
+  font-size: 14px;
+  font-weight: 600px;
+  border: none;
+  margin-top: 2rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.container .game .loading {
+  background-color: gray;
+  cursor: not-allowed;
 }
